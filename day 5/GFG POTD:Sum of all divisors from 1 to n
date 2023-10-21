@@ -1,0 +1,12 @@
+class Solution {
+    public long[] find(long l, long b, long h) {
+        long tsa = 2 * (l * b) + 2 * (b * h) + 2 * (h * l);
+        long area = l * b * h;
+        
+        long[] result = new long[2];
+        result[0] = tsa;
+        result[1] = area;
+        
+        return result;
+    }
+}
