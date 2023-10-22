@@ -1,0 +1,21 @@
+1. Simple Subqueries:
+
+A simple subquery is a query that can be executed independently of the outer query. It provides a single value or a set of values that the outer
+query can use for comparison or filtering. Simple subqueries can be used in various clauses, such as SELECT, WHERE, and HAVING.
+
+ example:
+SELECT employee_name
+FROM employees
+WHERE department_id = (SELECT department_id FROM departments WHERE department_name= 'Sales');
+
+
+
+2. Correlated Subqueries:
+
+A correlated subquery is a subquery that depends on the outer query for its execution. Unlike simple subqueries, 
+correlated subqueries are executed once for each row processed by the outer query. They are often used to perform row-by-row comparisons or calculations.
+
+example :
+SELECT product_name
+FROM products p
+WHERE price = (SELECT MAX(price) FROM products WHERE category_id = p.category_id);
