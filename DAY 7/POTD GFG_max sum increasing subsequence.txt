@@ -1,0 +1,23 @@
+int[] dp = new int[N];
+        
+        for (int i = 0; i < N; i++) {
+            dp[i] = arr[i]; // Initialize the value with the array element itself.
+        }
+        
+        for (int i = 1; i < N; i++) {
+            for (int j = 0; j < i; j++) {
+                if (arr[i] > arr[j] && dp[i] < dp[j] + arr[i]) {
+                    dp[i] = dp[j] + arr[i];
+                }
+            }
+        }
+        
+        int maxSum = 0;
+        for (int i = 0; i < N; i++) {
+            if (dp[i] > maxSum) {
+                maxSum = dp[i];
+            }
+        }
+        
+        return maxSum;
+    }
