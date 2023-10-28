@@ -1,0 +1,9 @@
+bool isPowerofTwo(long long n) {
+    if (n <= 0) {
+        return false;
+    }
+    
+    // If a number is a power of 2, it has only one bit set to 1.
+    // So, we can use bitwise operations to check for this condition.
+    return (n & (n - 1)) == 0;
+}
