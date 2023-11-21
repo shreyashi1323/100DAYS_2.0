@@ -1,14 +1,9 @@
+
+
+//User function Template for Java
 class Solution{
-    static void printTillN(int n){
+    static int multiplication(int A, int B){
         // code here
-        if(n==0)
-        return ;
-        
-        else
-         printTillN(n-1);
-        System.out.print(n+" ");
-      
-      
-        
+        return A*B;
     }
 }
